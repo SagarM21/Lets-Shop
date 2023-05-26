@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:lets_shop/widgets/grocery_list.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
